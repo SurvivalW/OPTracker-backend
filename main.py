@@ -2,11 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For development only; specify frontend URL in production
+    allow_origins=["https://survivalw.github.io"],  # GitHub Pages domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
