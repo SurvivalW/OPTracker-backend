@@ -35,6 +35,9 @@ async def tryTrack(payload: TrackRequest):
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64)",
         "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive"
     }
 
     async with httpx.AsyncClient() as client:
