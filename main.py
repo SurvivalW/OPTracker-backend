@@ -54,7 +54,7 @@ async def tryTrack(payload: TrackRequest):
         or soup.find(id="priceblock_dealprice")
         or soup.find("span", class_="a-offscreen")
     )
-    price = price_tag.get_text(strip=true) if price_tag else "Price not found XD"
+    price = price_tag.get_text(strip=True) if price_tag else "Price not found XD"
 
     availability_tag = soup.find(id="availability")
     availability = availability_tag.get_text(strip=True) if availability_tag else "Unknown"
